@@ -1,7 +1,7 @@
 /* Ozadje nastavim kot celozaslonsko */
-#white-box
-{
-border-radius: 25px;
-width: 200px;
-height: 150px;
+#whitebox {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
 }

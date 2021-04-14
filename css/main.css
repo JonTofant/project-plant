@@ -4,4 +4,6 @@
   width: 60%;
   height: 30;
   background-color: white;
+  padding-top: 100%;
+  position: absolute;
 }

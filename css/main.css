@@ -1,7 +1,8 @@
 /* Ozadje nastavim kot celozaslonsko */
 .naslov
 {
-  background-color: white;
   width: 60%;
   height: 1200;
+  padding-top: 100%;
+  background-color: white;
 }

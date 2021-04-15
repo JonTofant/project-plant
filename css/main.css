@@ -5,8 +5,12 @@
 }
 .title{
   font-family: "Times New Roman", Times, serif;
-}
+  font-size: 300%;
 
+}
+.infotext{
+  font-size: 140%
+}
 .mainbox{
   display: flex;
   justify-content: space-between;
@@ -26,6 +30,15 @@ body{
 }
 .two{
   order:3;
+  display: flex;
+  justify-content: center;
+}
+.graph{
+  width: 80%;
+  height: 50%;
+  align-self: flex-end;
+  background-image:url("http://placecorgi.com/260/180");
+  background-repeat: no-repeat;
 }
 .plantimagebox{
   order:2;
@@ -48,4 +61,8 @@ body{
 .box{
    border-style: dashed;
    border-width: thin;
+}
+.graph{
+  border-style: dashed;
+  border-width: thin;
 }

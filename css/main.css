@@ -58,7 +58,11 @@ h1
 }
 .plantimagebox
 {
-  height:350px;
+  height:200px;
+  width:200px;
+  position:relative;
+  margin: auto;
+  bottom:-100px;
   border-style:dashed;
   border-width: thin;
   border-radius: 25px;

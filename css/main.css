@@ -56,12 +56,20 @@ h1
   border-width: thin;
   border-radius: 25px;
 }
-.plantimage
+.plantimagebox
 {
+  height:350px;
   border-style:dashed;
   border-width: thin;
   border-radius: 25px;
 }
+.plantimage
+{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
 body
 {
   background-image: url('picturescss/OzadjeStaticMain.png');

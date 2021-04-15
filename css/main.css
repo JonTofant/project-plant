@@ -8,6 +8,8 @@
 body
 {
   background-image: url('picturescss/OzadjeStaticMain.png');
+  background-repeat: no-repeat;
+
 }
 .two
 {

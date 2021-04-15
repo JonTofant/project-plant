@@ -1,75 +1,51 @@
-.mainbox
-{
-  position:relative;
-  height: 300px;
-  border-radius: 25px;
-  border-width: thin;
-}
-.box
-{
-  background-color:white;
-  width: 200px;
-  height:300px;
-  border-radius: 25px;
-  border-width: thin;
-
-}
-.one
-{
-  position:absolute;
-  left:0px;
-  top:0px;
- /* top: -300px;*/
-}
-.infobox
-{
-  position:absolute;
-  top:5px;
-  left:5px;
-  float:center;
-  border-width: thin;
-  border-radius: 25px;
-}
-h1
-{
-   font-size: 15px;
-   text-align: left;
-}
-.two
-{
-  position:relative;
-  float:right;
-  top:0px;
-}
-
-.title
-{
-  font-size: 30px;
-  text-align: center;
-}
-.titlebox
-{
-  border-width: thin;
-  border-radius: 25px;
-}
-.plantimagebox
-{
-  height:400px;
-  width:400px;
-  position:relative;
-  margin: auto;
-  bottom:-100px;
-  border-width: thin;
-  border-radius: 25px;
-}
-.plantimage
-{
-  height: 100%;
+.titlebox{
   width: 100%;
-  object-fit: contain;
+  display: flex;
+  justify-content: center;
+}
+.title{
+  font-family: "Times New Roman", Times, serif;
 }
 
-body
-{
+.mainbox{
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+}
+body{
   background-image: url('picturescss/OzadjeStaticMain.png');
   background-repeat: no-repeat;
+}
+.box{
+   background-color: white;
+   width: 20%;
+   border-radius: 25px;
+}
+.one{
+  order: 1;
+}
+.two{
+  order:3;
+}
+.plantimagebox{
+  order:2;
+  width: 20%;
+}
+.plantimage{
+  width: 100%;
+  height: 100;
+}
+/*Frames*/
+.titlebox{
+  border-style: dashed;
+  border-width: thin;
+  }
+.mainbox{
+  border-style: dashed;
+  border-width: thin;
+
+}
+.box{
+   border-style: dashed;
+   border-width: thin;
+}

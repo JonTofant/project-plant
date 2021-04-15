@@ -1,6 +1,8 @@
-.box
-{
+.box{
   background-color:limegreen;
   width: 100px;
   height:100px;
+}
+body{
+background-image: url('pictures/OzadjeStaticMain.png');
 }

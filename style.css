@@ -16,7 +16,7 @@ body {
 }
 
 /*tablice in zasloni srednjih velikosti*/
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 551px) {
   body {
     background-color: gold;
   }

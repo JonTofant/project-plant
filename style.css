@@ -1,0 +1,30 @@
+/*globalni stilyng*/
+body {
+  background-color: #add9db;
+}
+.naslov {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: white;
+}
+
+/*telefoni in majhni zasloni*/
+@media only screen and (max-width: 450px) {
+  body {
+    background-color: gray;
+  }
+}
+
+/*tablice in zasloni srednjih velikosti*/
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: gold;
+  }
+}
+
+/*tablice in zasloni srednjih velikosti*/
+@media only screen and (min-width: 900px) {
+  body {
+    background-color: lightblue;
+  }
+}

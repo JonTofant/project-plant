@@ -9,7 +9,7 @@ body {
 }
 
 /*telefoni in majhni zasloni*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 550px) {
   body {
     background-color: gray;
   }

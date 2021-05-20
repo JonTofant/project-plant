@@ -55,27 +55,26 @@ body {
   }
   .srceContainer {
     flex-basis: 100%;
-    border-style: solid;
     height: 70px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
   .slikaSrce {
     height: 100%;
   }
-  .informativnaSvetilka{
-    width:35px;
+  .informativnaSvetilka {
+    width: 35px;
     height: 35px;
     border-radius: 50%;
     background-color: greenyellow;
   }
-  .vlagaContainer{
+  .vlagaContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
   }
-  .infoText{
+  .infoText {
     margin: 5px;
   }
 

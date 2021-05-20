@@ -1,2 +1,1 @@
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
+- [ ] Tablični način se začne prepozno. Zaradi tega je telefonski način preširok.

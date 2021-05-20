@@ -3,8 +3,6 @@ const body = document.querySelector('body');
 let notranjiOkvirEna = document.querySelector('.ena');
 let notranjiOkvirDva = document.querySelector('.dve');
 let notranjiOkvirTri = document.querySelector('.tri');
-
-let tema = "svetla"
 let clicked =true;
 gumbBarva.addEventListener('click', function (e){
     if(!clicked){

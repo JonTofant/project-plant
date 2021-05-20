@@ -76,8 +76,27 @@ body {
   }
   .infoText {
     margin: 5px;
+    font-family: arial;
+    font-size: 20px;
+    font-style: thin;
   }
-
+  .temperaturaContainer{
+    display: flex;
+  }
+  .kakovostContainer{
+    display:flex;
+  }
+  .zalivanjeContainer{
+    display: flex;
+  }
+  .gumbZalivanje{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    border-style: none;
+    background-color:gray;
+    margin-left: 5px;
+  }
   .dve {
     order: 2;
     display: flex;

@@ -77,25 +77,26 @@ body {
   .infoText {
     margin: 5px;
     font-family: arial;
-    font-size: 20px;
+    font-size: auto;
     font-style: thin;
   }
-  .temperaturaContainer{
+  .temperaturaContainer {
     display: flex;
   }
-  .kakovostContainer{
-    display:flex;
-  }
-  .zalivanjeContainer{
+  .kakovostContainer {
     display: flex;
   }
-  .gumbZalivanje{
-    width:30px;
-    height:30px;
+  .zalivanjeContainer {
+    display: flex;
+  }
+  .gumbZalivanje {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border-style: none;
-    background-color:gray;
+    background-color: gray;
     margin-left: 5px;
+    outline: inherit;
   }
   .dve {
     order: 2;
@@ -111,10 +112,104 @@ body {
 @media only screen and (min-width: 500px) {
   body {
     background-color: gold;
+    display: flex;
+    flex-direction: column;
+  }
+  .infoText{
+    margin: 5px;
+    font-family: arial;
+    font-size: auto;
+  }
+  .naslovniOkvir {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+  }
+  .naslov{
+    text-align: left;
+    flex-basis: 80%;
+  }
+  .gumbBarva{
+    height:100px;
+  }
+  .zunanjiOkvir {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+  }
+  .notranjiOkvir {
+    background-color: white;
+    flex-basis: 100%;
+    min-height: 300px;
+    border-style: solid;
+    border-radius: 15px;
+    margin: 5%;
+  }
+  .gumbBarva {
+    flex-basis: 20%;
+    border-radius: 10px;
+    outline: inherit;
+    border-style: solid;
+  }
+  .ena {
+    display: flex;
+    flex-basis: 30%;
+  }
+  .srceContainer{
+    flex-basis: 100%;
+    height: 70px;
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .slikaSrce{
+    height: 100%;
+  }
+  .informativnaSvetilka{
+    background-color: greenyellow;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .vlagaContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  .temperaturaContainer{
+    display: flex;
+  }
+  .kakovostContainer{
+    display: flex;
+  }
+  .zalivanjeContainer{
+    display:flex;
+    align-items:center;
+  }
+  .gumbZalivanje{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    outline: inherit;
+    border-style:none;
+    background-color:gray;
+  }
+
+  .dve {
+    border-style: solid;
+    flex-basis: 30%;
+  }
+  .tri {
+    border-style: solid;
+    flex-basis: 80%;
   }
 }
 
-/*tablice in zasloni srednjih velikosti*/
+/*računalniki in zasloni širokih velikosti*/
 @media only screen and (min-width: 900px) {
   body {
     background-color: grey;

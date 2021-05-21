@@ -1,1 +1,1 @@
-- [ ] Tablični način se začne prepozno. Zaradi tega je telefonski način preširok.
+- [x] Tablični način se začne prepozno. Zaradi tega je telefonski način preširok.

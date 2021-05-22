@@ -27,7 +27,7 @@ body {
   font-size: 50px;
   color: white;
 }
-/*globalni stil za zunanji in notranji okvir in njegove elemente*/
+/*globalni stil za zunanji, notranji okvir in njegove elemente*/
 .zunanjiOkvir{
   display: flex;
   flex-direction: column;

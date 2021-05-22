@@ -119,12 +119,19 @@ body {
 
 /*tablice in zasloni srednjih velikosti*/
 @media only screen and (min-width: 500px) {
+  .body{
+    display:grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 100%;
+    grid-template-columns:"naslovniOkvir zunanjiOkvir";
+  }
   .infoText {
     margin: 5px;
     font-family: arial;
     font-size: auto;
   }
   .naslovniOkvir {
+    grid-area: "naslovniOkvir";
     display: flex;
     margin: 20px;
     justify-content: space-between;

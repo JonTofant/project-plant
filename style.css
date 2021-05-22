@@ -1,38 +1,49 @@
-/*globalni stilyng*/
+/*globalni stil*/
+
 body {
   background-color: #add9db;
   display: flex;
   flex-direction: column;
 }
+
 /*globalni stil za vso besedilo razen naslov*/
+
 .infoText {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
   font-weight: bold;
   margin-right: 5px;
 }
+
 /*globalni stil za naslovni okvir in njegove elemente*/
+
 .naslovniOkvir {
   display: flex;
 }
+
 .gumbBarva {
-  outline: inherit;
   border-style: solid;
   border-radius: 10px;
   background-color: white;
 }
+
 .naslov {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   color: white;
 }
-/*globalni stil za zunanji, notranji okvir in njegove elemente*/
+
+/*-----------------------------------------------------------
+globalni stil za zunanji, notranji okvir in njegove elemente
+--------------------------------------------------------------*/
+
 .zunanjiOkvir {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+
 .notranjiOkvir {
   display: flex;
   flex-direction: column;
@@ -44,22 +55,41 @@ body {
   border-radius: 15px;
   margin: 15px;
 }
+
 .ena {
   flex-flow: column flow;
   align-content: space-evenly;
 }
+
 .srceContainer {
   flex-basis: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.slikaSrce {
-  height: inherit;
-}
+
 .containerStil {
   display: flex;
   align-items: center;
+}
+
+/*----------
+  Gumbi
+----------*/
+
+.informativnaSvetilka {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: greenyellow;
+}
+
+/*----------
+  Gumbi
+----------*/
+
+.slikaSrce{
+  height:inherit;
 }
 
 /*telefoni in majhni zasloni*/
@@ -68,45 +98,50 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
   .naslov {
     text-align: center;
   }
+
   .gumbBarva {
     width: 20%;
   }
+
   .notranjiOkvir {
     min-height: 300px;
   }
+
   /*Prvi okvir za informacijam*/
   .ena {
     height: 100%;
   }
+
   .containerStil {
     height: 60px;
   }
+
   .slikaSrce {
     height: inherit;
   }
-  .informativnaSvetilka {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: greenyellow;
-  }
+  
   .vlagaContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
   }
+
   .temperaturaContainer {
     display: flex;
   }
+
   .kakovostContainer {
     display: flex;
   }
+
   .zalivanjeContainer {
     display: flex;
   }
+
   .gumbZalivanje {
     width: 30px;
     height: 30px;
@@ -114,12 +149,20 @@ body {
     border-style: none;
     background-color: gray;
     margin-left: 5px;
-    outline: inherit;
   }
+
 }
 
-/*tablice in zasloni srednjih velikosti*/
+/*------------------------------------
+tablice in zasloni srednjih velikosti
+--------------------------------------*/
+
 @media only screen and (min-width: 500px) {
+
+  /*--------------
+    Osnovna postavitev
+    -----------------*/
+
   body {
     display: grid;
     grid-template-columns: 90%;
@@ -129,21 +172,22 @@ body {
       "naslovniOkvir"
       "zunanjiOkvir";
   }
+
   .naslovniOkvir {
     grid-area: naslovniOkvir;
     display: flex;
     justify-content:space-between;
     align-items: center;
   }
-  .slikaSrce{
-    height: 20px;
-  }
+
   .notranjiOkvir{
     margin-left: 0;
   }
+  
   /*-------------------------------
   Razporeditev v zunanjem okvirju
   ---------------------------------*/
+
   .zunanjiOkvir{
     display: grid;
     grid-template-columns:40% 40% ;
@@ -153,26 +197,52 @@ body {
       "okvirTri okvirTri";
     gap: 20px;
   }
+
   .tri{
     grid-area:okvirTri;
+  }
+
+  /*-------------------------------
+  Razporeditev v notranjem okvirju
+  --------------------------------*/
+
+  .ena{
+    display: grid;
+    grid-template-rows:repeat(5,20%)
   }
 
   /*---------
       Gumbi
   -----------*/
+
   .gumbBarva{
     height:30%
   }
+
   .gumbZalivanje{
     border-radius: 50%;
     height: 20px;
     width:20px
   }
+
+   /*---------
+      slike
+  -----------*/
+
+  .srceContainer{
+    height:100%
+  }
+
 }
 
-/*računalniki in zasloni širokih velikosti*/
+/*--------------------------------------
+računalniki in zasloni širokih velikosti
+-----------------------------------------*/
+
 @media only screen and (min-width: 900px) {
+  
   body {
     background-color: grey;
   }
+  
 }

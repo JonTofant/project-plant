@@ -56,11 +56,6 @@ globalni stil za zunanji, notranji okvir in njegove elemente
   margin: 15px;
 }
 
-.ena {
-  flex-flow: column flow;
-  align-content: space-evenly;
-}
-
 .srceContainer {
   flex-basis: 100%;
   display: flex;
@@ -71,7 +66,21 @@ globalni stil za zunanji, notranji okvir in njegove elemente
 .containerStil {
   display: flex;
   align-items: center;
+  margin-left: 5px;
 }
+
+.tri{
+  background-color:inherit;
+}
+
+/*-------------------------------
+  Razporeditev v notranjem okvirju
+  --------------------------------*/
+
+  .ena{
+    display: grid;
+    grid-template-rows:repeat(5,20%)
+  }
 
 /*----------
   Gumbi
@@ -85,11 +94,15 @@ globalni stil za zunanji, notranji okvir in njegove elemente
 }
 
 /*----------
-  Gumbi
+  Slike
 ----------*/
 
 .slikaSrce{
   height:inherit;
+}
+
+.srceContainer{
+  height:100%;
 }
 
 /*telefoni in majhni zasloni*/
@@ -202,15 +215,6 @@ tablice in zasloni srednjih velikosti
     grid-area:okvirTri;
   }
 
-  /*-------------------------------
-  Razporeditev v notranjem okvirju
-  --------------------------------*/
-
-  .ena{
-    display: grid;
-    grid-template-rows:repeat(5,20%)
-  }
-
   /*---------
       Gumbi
   -----------*/
@@ -229,10 +233,6 @@ tablice in zasloni srednjih velikosti
       slike
   -----------*/
 
-  .srceContainer{
-    height:100%
-  }
-
 }
 
 /*--------------------------------------
@@ -241,8 +241,31 @@ računalniki in zasloni širokih velikosti
 
 @media only screen and (min-width: 900px) {
   
-  body {
-    background-color: grey;
+  /*-------------------
+  Osnovna razporeditev
+  ----------------------*/
+
+  /*--------------------------------
+  Razporeditev v zunanjem okvirju
+  --------------------------------*/
+
+  .zunanjiOkvir{
+    display: grid;
+    grid-template-columns: 30% 20% 20% 30%;
+    justify-content: center;
+    grid-auto-rows: minmax(auto,200px);
+    grid-template-areas:
+    "leviOkvir slika slika desniOkvir"
+    "leviOkvir slika slika desniOkvir";
   }
-  
+  .ena{
+    grid-area: leviOkvir;
+  }
+  .dve{
+    grid-area: desniOkvir
+  }
+  .tri{
+    grid-area:slika
+  }
+
 }

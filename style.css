@@ -67,10 +67,6 @@ globalni stil za zunanji, notranji okvir in njegove elemente
   align-items: center;
 }
 
-.tri{
-  background-color:inherit;
-}
-
 /*-------------------------------
   Razporeditev v notranjem okvirju
   --------------------------------*/
@@ -110,6 +106,20 @@ globalni stil za zunanji, notranji okvir in njegove elemente
 
 .srceContainer{
   height:100%;
+}
+
+.tri{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color:inherit;
+ /* border-style:none; */
+}
+
+.slikaRastlina{
+  height:100%;
+  width:100%;
+  border-style: solid;
 }
 
 /*telefoni in majhni zasloni*/

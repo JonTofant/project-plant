@@ -10,7 +10,7 @@ body {
 
 .infoText {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-right: 5px;
 }
@@ -29,7 +29,7 @@ body {
 
 .naslov {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 3em;
   color: white;
 }
 
@@ -53,11 +53,10 @@ globalni stil za zunanji, notranji okvir in njegove elemente
   height: 100%;
   border-style: solid;
   border-radius: 15px;
-  margin: 15px;
+  margin-top: 15px;
 }
 
 .srceContainer {
-  flex-basis: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -66,7 +65,6 @@ globalni stil za zunanji, notranji okvir in njegove elemente
 .containerStil {
   display: flex;
   align-items: center;
-  margin-left: 5px;
 }
 
 .tri{
@@ -84,13 +82,22 @@ globalni stil za zunanji, notranji okvir in njegove elemente
 
 /*----------
   Gumbi
-----------*/
+----------*/ 
 
 .informativnaSvetilka {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   background-color: greenyellow;
+}
+
+.gumbZalivanje {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border-style: none;
+  background-color: gray;
+  margin-left: 5px;
 }
 
 /*----------
@@ -129,10 +136,6 @@ globalni stil za zunanji, notranji okvir in njegove elemente
     height: 100%;
   }
 
-  .containerStil {
-    height: 60px;
-  }
-
   .slikaSrce {
     height: inherit;
   }
@@ -153,15 +156,6 @@ globalni stil za zunanji, notranji okvir in njegove elemente
 
   .zalivanjeContainer {
     display: flex;
-  }
-
-  .gumbZalivanje {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border-style: none;
-    background-color: gray;
-    margin-left: 5px;
   }
 
 }
@@ -203,7 +197,7 @@ tablice in zasloni srednjih velikosti
 
   .zunanjiOkvir{
     display: grid;
-    grid-template-columns:40% 40% ;
+    grid-template-columns:45% 45% ;
     grid-auto-rows:minmax(auto,300px);
     grid-template-areas:
       "okvirEna okvirDva"
@@ -221,13 +215,7 @@ tablice in zasloni srednjih velikosti
 
   .gumbBarva{
     height:30%
-  }
-
-  .gumbZalivanje{
-    border-radius: 50%;
-    height: 20px;
-    width:20px
-  }
+  } 
 
    /*---------
       slike
@@ -256,7 +244,8 @@ računalniki in zasloni širokih velikosti
     grid-auto-rows: minmax(auto,200px);
     grid-template-areas:
     "leviOkvir slika slika desniOkvir"
-    "leviOkvir slika slika desniOkvir";
+    "leviOkvir slika slika desniOkvir"
+    "prostorLevo slika slika prostorDesno";
   }
   .ena{
     grid-area: leviOkvir;

@@ -1,4 +1,8 @@
-//Deklaracija spremenljivk
+/*------------
+Deklaracija spremenljivk
+-----------------*/
+
+const slikaGumbBarva = document.querySelector('.slikaGumbBarva')
 const gumbBarva = document.querySelector('.gumbBarva');
 const body = document.querySelector('body');
 let notranjiOkvirEna = document.querySelector('.ena');
@@ -26,38 +30,47 @@ gumbBarva.addEventListener('click', function (e){
         
         svetlo()
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
     }
     else{
         temno()
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
         
     }
     
 });
 
+/*------------
+Svetli način
+-----------------*/
 
 function svetlo(){
-    //Svetla tema nadzorne plošče
     body.style.backgroundColor='#add9db'
     clicked= true
     notranjiOkvirEna.style.backgroundColor='white'
     notranjiOkvirDva.style.backgroundColor='white'
     //Shrani izbiro uporabnika v localstorage
     window.localStorage.setItem('tema', 'svetla');
+    slikaGumbBarva.src='slike/lightMode.svg'
 }
+
+/*------------
+Temni način
+-----------------*/
+
 function temno(){
-    //Temna tema nadzorne plošče
-    body.style.backgroundColor='#1521d3'
+    body.style.backgroundColor='#606060'
     clicked=false
     notranjiOkvirEna.style.backgroundColor='darkGrey'
     notranjiOkvirDva.style.backgroundColor='darkGrey'
     //Shrani izbiro uporabnika v localstorage
     window.localStorage.setItem('tema', 'temna');
+    slikaGumbBarva.src='slike/darkoMode.svg'
 }
 
-//Graf
+/*-------
+Graf
+---------*/
+
 google.load('visualization', '1', {
     packages: ['corechart', 'line']
   });

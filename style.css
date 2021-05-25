@@ -23,9 +23,8 @@ body {
 }
 
 .gumbBarva {
-  border-style: solid;
-  border-radius: 10px;
-  background-color: white;
+  border-style:none;
+  background-color: inherit;
 }
 
 .naslov {
@@ -241,9 +240,7 @@ računalniki in zasloni širokih velikosti
   /*-------------------
   Osnovna razporeditev
   ----------------------*/
-  .glavniContainer {
-  }
-
+ 
   /*--------------------------------
   Razporeditev v zunanjem okvirju
   --------------------------------*/
@@ -252,7 +249,7 @@ računalniki in zasloni širokih velikosti
     display: grid;
     grid-template-columns: 20% 20% 20%;
     justify-content:space-between;
-    grid-template-rows: minmax(auto, 100px);
+    grid-auto-rows: minmax(auto, 100px);
     grid-template-areas:
       "leviOkvir slika desniOkvir"
       "leviOkvir slika desniOkvir"

@@ -113,13 +113,13 @@ globalni stil za zunanji, notranji okvir in njegove elemente
   align-items: center;
   justify-content: flex-end;
   background-color:inherit;
- /* border-style:none; */
+  /*border-style:none;*/
+
 }
 
 .slikaRastlina{
   height:100%;
   width:100%;
-  border-style: solid;
 }
 
 /*telefoni in majhni zasloni*/

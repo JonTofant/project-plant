@@ -4,6 +4,7 @@ body {
   background-color: #add9db;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /*globalni stil za vso besedilo razen naslov*/
@@ -113,12 +114,7 @@ globalni stil za zunanji, notranji okvir in njegove elemente
   align-items: center;
   justify-content: flex-end;
   background-color: inherit;
-  /*border-style:none;*/
-}
-
-.slikaRastlina {
-  height: 100%;
-  width: 100%;
+  border-style: none;
 }
 
 /*----------
@@ -245,6 +241,8 @@ računalniki in zasloni širokih velikosti
   /*-------------------
   Osnovna razporeditev
   ----------------------*/
+  .glavniContainer {
+  }
 
   /*--------------------------------
   Razporeditev v zunanjem okvirju
@@ -252,21 +250,30 @@ računalniki in zasloni širokih velikosti
 
   .zunanjiOkvir {
     display: grid;
-    grid-template-columns: 30% 20% 20% 30%;
-    justify-content: center;
-    grid-auto-rows: minmax(auto, 200px);
+    grid-template-columns: 20% 20% 20%;
+    justify-content:space-between;
+    grid-template-rows: minmax(auto, 100px);
     grid-template-areas:
-      "leviOkvir slika slika desniOkvir"
-      "leviOkvir slika slika desniOkvir"
-      "prostorLevo slika slika prostorDesno";
+      "leviOkvir slika desniOkvir"
+      "leviOkvir slika desniOkvir"
+      "prostoLevo slika prostoDesno";
   }
+
   .ena {
     grid-area: leviOkvir;
+    min-width: 200px;
   }
+
   .dve {
     grid-area: desniOkvir;
+    min-width:200px;
   }
+
   .tri {
+    min-width: 200px;
     grid-area: slika;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }

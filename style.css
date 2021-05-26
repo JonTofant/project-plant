@@ -1,4 +1,6 @@
-/*globalni stil*/
+/*------------
+globalni stil
+--------------*/
 
 body {
   background-color: #add9db;
@@ -7,7 +9,9 @@ body {
   height: 100%;
 }
 
-/*globalni stil za vso besedilo razen naslov*/
+/*----------------------------------------
+globalni stil za vso besedilo razen naslov
+-------------------------------------------*/
 
 .infoText {
   font-family: Arial, Helvetica, sans-serif;
@@ -16,14 +20,16 @@ body {
   margin-right: 5px;
 }
 
-/*globalni stil za naslovni okvir in njegove elemente*/
+/*--------------------------------------------------
+globalni stil za naslovni okvir in njegove elemente
+----------------------------------------------------*/
 
 .naslovniOkvir {
   display: flex;
 }
 
 .gumbBarva {
-  border-style:none;
+  border-style: none;
   background-color: inherit;
 }
 
@@ -124,7 +130,10 @@ Grafi
   overflow: hidden;
 }
 
-/*telefoni in majhni zasloni*/
+/*---------------------------
+telefoni in majhni zasloni
+-----------------------------*/
+
 @media only screen and (max-width: 500px) {
   .naslovniOkvir {
     flex-direction: column;
@@ -143,7 +152,10 @@ Grafi
     min-height: auto;
   }
 
-  /*Prvi okvir za informacijam*/
+  /*----------------------
+  Prvi okvir za informacijam
+  --------------------------*/
+
   .ena {
     height: 100%;
   }
@@ -240,7 +252,7 @@ računalniki in zasloni širokih velikosti
   /*-------------------
   Osnovna razporeditev
   ----------------------*/
- 
+
   /*--------------------------------
   Razporeditev v zunanjem okvirju
   --------------------------------*/
@@ -248,7 +260,7 @@ računalniki in zasloni širokih velikosti
   .zunanjiOkvir {
     display: grid;
     grid-template-columns: 20% 20% 20%;
-    justify-content:space-between;
+    justify-content: space-between;
     grid-auto-rows: minmax(auto, 100px);
     grid-template-areas:
       "leviOkvir slika desniOkvir"
@@ -263,7 +275,7 @@ računalniki in zasloni širokih velikosti
 
   .dve {
     grid-area: desniOkvir;
-    min-width:200px;
+    min-width: 200px;
   }
 
   .tri {

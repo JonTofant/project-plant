@@ -2,14 +2,17 @@
 Deklaracija spremenljivk
 -------------------------*/
 
+const { randomInt } = require("node:crypto");
+
  //Tema je v osnovi svetla
- let clicked =true;
+let clicked =true;
  //temaOzadja dobi vrednost shranjeno iz prejšnjega obiska strani
 let temaOzadja=window.localStorage.getItem('tema');
 
 /*-------
 THE DOM
 --------*/
+
 const slikaGumbBarva = document.querySelector('.slikaGumbBarva')
 const gumbBarva = document.querySelector('.gumbBarva');
 const body = document.querySelector('body');
@@ -24,6 +27,8 @@ Glavni program
 preverjanjeOzadja();
 
 gumbBarvaClick();
+
+informacijskeVrednosti();
 
 
 
@@ -139,3 +144,17 @@ function preverjanjeOzadja(){
     }
   
   }
+
+  /*-----------------------
+  Informacijske vrednosti
+  -------------------------*/
+
+  function informacijskeVrednosti(){
+    const vlagaText = document.querySelector('.vlagaText');
+    let temp
+    let vlaga = 10
+    let kakovost
+    vlagaText.innerHTML='Vlažnost: ' + vlaga + '%';
+
+  }
+

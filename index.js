@@ -1,37 +1,87 @@
-/*-----------------------
+/*------------
 Deklaracija spremenljivk
--------------------------*/
+-----------------*/
 
-const { randomInt } = require("node:crypto");
-
- //Tema je v osnovi svetla
-let clicked =true;
- //temaOzadja dobi vrednost shranjeno iz prejšnjega obiska strani
-let temaOzadja=window.localStorage.getItem('tema');
-
-/*-------
-THE DOM
---------*/
-
+const vlagaText = document.querySelector('.vlagaText')
 const slikaGumbBarva = document.querySelector('.slikaGumbBarva')
 const gumbBarva = document.querySelector('.gumbBarva');
 const body = document.querySelector('body');
 let notranjiOkvirEna = document.querySelector('.ena');
 let notranjiOkvirDva = document.querySelector('.dve');
+let vlaga;
+let clicked =true; //Tema je v osnovi svetla
+//temaOzadja dobi vrednost shranjeno iz prejšnjega obiska strani
+let temaOzadja=window.localStorage.getItem('tema');
+//Preveri če tema ozadja obstaja
+if(temaOzadja){
+    //Če tema ozadja obstaja in je ta temna vklopi temen način
+    if(temaOzadja=='temna'){
+        temno()
 
+    }
+    //Drugače vklopi svetel način
+    else{
+        svetlo()
+    }
+}
 
-/*---------------
+/*------
 Glavni program
+----------*/
+
+barvaOzadja();
+setInterval(function(){ 
+  let num = 20+ Math.random();
+  num = (Math.round(num * 100) / 100).toFixed(2);
+  vlagaText.innerHTML = 'Vlažnost: '+num+'%';
+  //other code
+}, 1000);
+
+
+/*------------
+Funkcija za barvo ozadja
+--------------*/
+
+function barvaOzadja(){
+  gumbBarva.addEventListener('click', function (e){
+    //Posluša za klik na gumb
+    if(!clicked){
+        svetlo()
+    }
+    else{
+        temno()
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    } 
+  });
+}
+
+/*------------
+Svetli način
 -----------------*/
 
-preverjanjeOzadja();
+function svetlo(){
+    body.style.backgroundColor='#add9db'
+    clicked= true
+    notranjiOkvirEna.style.backgroundColor='white'
+    notranjiOkvirDva.style.backgroundColor='white'
+    //Shrani izbiro uporabnika v localstorage
+    window.localStorage.setItem('tema', 'svetla');
+    slikaGumbBarva.src='slike/lightMode.svg'
+}
 
-gumbBarvaClick();
+/*------------
+Temni način
+-----------------*/
 
-informacijskeVrednosti();
-
-
-
+function temno(){
+    body.style.backgroundColor='#606060'
+    clicked=false
+    notranjiOkvirEna.style.backgroundColor='darkGrey'
+    notranjiOkvirDva.style.backgroundColor='darkGrey'
+    //Shrani izbiro uporabnika v localstorage
+    window.localStorage.setItem('tema', 'temna');
+    slikaGumbBarva.src='slike/darkoMode.svg'
+}
 
 /*-------
 Graf
@@ -76,85 +126,3 @@ google.load('visualization', '1', {
     window.onresize = resize;
   
   }
-
-  /*--------------
-  Gumb za barvo ozadja
-  ----------------*/
-
-  function gumbBarvaClick(){
-    gumbBarva.addEventListener('click', function (e){
-        //Posluša za klik na gumb
-        if(!clicked){ 
-            svetlo()
-        }
-        else{
-            temno()            
-        }
-        
-    });
-    
-    }
-
-
-/*------------
-Svetli način
------------------*/
-
-function svetlo(){
-    body.style.backgroundColor='#add9db'
-    clicked= true
-    notranjiOkvirEna.style.backgroundColor='white'
-    notranjiOkvirDva.style.backgroundColor='white'
-    //Shrani izbiro uporabnika v localstorage
-    window.localStorage.setItem('tema', 'svetla');
-    slikaGumbBarva.src='slike/lightMode.svg'
-}
-
-/*------------
-Temni način
------------------*/
-
-function temno(){
-  body.style.backgroundColor='#606060'
-  clicked=false
-  notranjiOkvirEna.style.backgroundColor='darkGrey'
-  notranjiOkvirDva.style.backgroundColor='darkGrey'
-  //Shrani izbiro uporabnika v localstorage
-  window.localStorage.setItem('tema', 'temna');
-  slikaGumbBarva.src='slike/darkoMode.svg'
-}
-
-/*-----------------------------
-Preverjanje shranjenega ozadja
--------------------------------*/
-
-function preverjanjeOzadja(){
-
-  //Preveri če tema ozadja obstaja
-    if(temaOzadja){
-        //Če tema ozadja obstaja in je ta tema temna vklopi temni način
-        if(temaOzadja=='temna'){
-            temno()
-  
-        }
-        //Drugače vklopi svetel način
-        else{
-            svetlo()
-        }
-    }
-  
-  }
-
-  /*-----------------------
-  Informacijske vrednosti
-  -------------------------*/
-
-  function informacijskeVrednosti(){
-    const vlagaText = document.querySelector('.vlagaText');
-    let temp
-    let vlaga = 10
-    let kakovost
-    vlagaText.innerHTML='Vlažnost: ' + vlaga + '%';
-
-  }
-

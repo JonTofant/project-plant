@@ -2,11 +2,13 @@
 Deklaracija spremenljivk
 -----------------*/
 
+const vlagaText = document.querySelector('.vlagaText')
 const slikaGumbBarva = document.querySelector('.slikaGumbBarva')
 const gumbBarva = document.querySelector('.gumbBarva');
 const body = document.querySelector('body');
 let notranjiOkvirEna = document.querySelector('.ena');
 let notranjiOkvirDva = document.querySelector('.dve');
+let vlaga;
 let clicked =true; //Tema je v osnovi svetla
 //temaOzadja dobi vrednost shranjeno iz prejšnjega obiska strani
 let temaOzadja=window.localStorage.getItem('tema');
@@ -23,21 +25,35 @@ if(temaOzadja){
     }
 }
 
+/*------
+Glavni program
+----------*/
 
-gumbBarva.addEventListener('click', function (e){
+barvaOzadja();
+setInterval(function(){ 
+  let num = 20+ Math.random();
+  num = (Math.round(num * 100) / 100).toFixed(2);
+  vlagaText.innerHTML = 'Vlažnost: '+num+'%';
+  //other code
+}, 1000);
+
+
+/*------------
+Funkcija za barvo ozadja
+--------------*/
+
+function barvaOzadja(){
+  gumbBarva.addEventListener('click', function (e){
     //Posluša za klik na gumb
     if(!clicked){
-        
         svetlo()
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
     }
     else{
         temno()
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        
-    }
-    
-});
+    } 
+  });
+}
 
 /*------------
 Svetli način

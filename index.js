@@ -94,14 +94,14 @@ google.load('visualization', '1', {
   
   function drawBackgroundColor() {
     var data = new google.visualization.DataTable();
-    data.addColumn('number', 'X');
+    data.addColumn('number', 'x');
     data.addColumn('number', 'Temperatura');
     data.addColumn('number', 'Vlaga');
     console.log("--");
     data.addRows([
       [0, 0, 0],
-      [10, 10, 15],
-      [20, 20, 65]
+      [1, 10, 15],
+      [2, 20, 65]
     ]);
     console.log(data);
      var options = {

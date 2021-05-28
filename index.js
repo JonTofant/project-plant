@@ -105,7 +105,7 @@ google.load('visualization', '1', {
     ]);
     console.log(data);
      var options = {
-      height: 350,
+      height: "",
       legend: {
         position: 'bottom'
       },

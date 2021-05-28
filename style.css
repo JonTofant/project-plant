@@ -127,7 +127,6 @@ Grafi
 ----------*/
 .graf {
   margin: 5%;
-  overflow: hidden;
 }
 
 /*---------------------------
@@ -227,6 +226,7 @@ tablice in zasloni srednjih velikosti
     gap: 20px;
   }
 
+
   .tri {
     grid-area: okvirTri;
   }
@@ -242,6 +242,23 @@ tablice in zasloni srednjih velikosti
   /*---------
       slike
   -----------*/
+  .slikaRastlina{
+    max-height: 300px;
+  }
+
+  /*---------
+      Graf
+  ------------*/
+
+  .grafContainer{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+  }
+  .graf{
+    width:100%;
+  }
 }
 
 /*--------------------------------------
@@ -261,7 +278,7 @@ računalniki in zasloni širokih velikosti
     display: grid;
     grid-template-columns: 20% 20% 20%;
     justify-content: space-between;
-    grid-auto-rows: minmax(auto, 100px);
+    grid-auto-rows: minmax(auto, 200px);
     grid-template-areas:
       "leviOkvir slika desniOkvir"
       "leviOkvir slika desniOkvir"

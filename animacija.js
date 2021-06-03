@@ -13,7 +13,7 @@ popmotion.listen(document, "mouseup").start(() => {
     .spring({
       from: ballXY.get(),
       velocity: ballXY.getVelocity(),
-      to: { x: 0, y: 0 },
+      to: { x: 10, y: 10 },
       stiffness: 200
     })
     .start(ballXY);

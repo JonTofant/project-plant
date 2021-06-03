@@ -7,8 +7,19 @@
     <title>Rastlina</title>
     <link rel="icon" href="slike/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">   
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript">    </script> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript">    </script> 
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="./mqtt_graf.js"></script>
 </head>
-<body>
+<body onload="init();">
     <section class="naslovniOkvir">
         <h1 class="naslov">Informativno stanje rastline</h1>
         <button class="gumbBarva" >
@@ -17,27 +28,37 @@
     </section>
     <section class="zunanjiOkvir">
         <section class="notranjiOkvir ena">
+
                     <div class="srceContainer containerStil">
                         <img class='slikaSrce' src="slike/Heart.ico"> 
                         <div class="informativnaSvetilka"></div>
                     </div>
+
                     <div class="vlagaContainer containerStil">
-                        <div class="infoText vlagaText">Vlažnost: 50%</div>
+                        <div class="infoText vlagaText">Vlažnost: </div>
+                        <div class="vlagMqtt infoText" id="humidity" >20</div>
                     </div>
+
                     <div class="temperaturaContainer containerStil">
-                        <div class="infoText">Temperatura: 23°</div>                    </div>
+                        <div class="infoText">Temperatura: </div>
+                        <div class="infoText tempMqtt" id="temperature">21</div>
+                    </div>
+
                     <div class="kakovostContainer containerStil">
                         <div class="infoText">Kakovost: 50</div>
                     </div>
+
                     <div class="zalivanjeContainer containerStil">
                         <div class="infoText">Zalivanje</div>
-                        <button class="gumbZalivanje"></button>
+                        <input id="pub" type="button" class="gumbZalivanje" onclick="klima_switch();" />
                     </div>
+
                 <div class="stanjeSvetilka"></div>
+
         </section>
         <section class="notranjiOkvir dve">
             <div class="grafContainer">
-                <div id="chart_div" class="graf"></div>
+                <div id="container" class="graf"></div>
             </div>
         </section>
         <section class="notranjiOkvir tri">

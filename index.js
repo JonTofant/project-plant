@@ -2,7 +2,6 @@
 Deklaracija spremenljivk
 -----------------*/
 
-const vlagaText = document.querySelector('.vlagaText')
 const slikaGumbBarva = document.querySelector('.slikaGumbBarva')
 const gumbBarva = document.querySelector('.gumbBarva');
 const body = document.querySelector('body');
@@ -30,12 +29,7 @@ Glavni program
 ----------*/
 
 barvaOzadja();
-setInterval(function(){ 
-  let num = 20+ Math.random();
-  num = (Math.round(num * 100) / 100).toFixed(2);
-  vlagaText.innerHTML = 'Vlažnost: '+num+'%';
-  //other code
-}, 1000);
+
 
 
 /*------------
@@ -86,7 +80,7 @@ function temno(){
 /*-------
 Graf
 ---------*/
-
+/* Ostanek google grafa
 google.load('visualization', '1', {
     packages: ['corechart', 'line']
   });
@@ -126,3 +120,4 @@ google.load('visualization', '1', {
     window.onresize = resize;
   
   }
+  */

@@ -56,7 +56,6 @@ function onConnectionLost(responseObject) {
     //window.setTimeout(location.reload(),20000); //wait 20seconds before trying to connect again.
 };
 
-
 function klima_switch(){
     if(current_state_of_klima == 0){
         send_message('1', 0, 'klima');
@@ -104,20 +103,22 @@ function onMessageArrived(message) {
     
     if(message.destinationName === klima_status_topic){
         /*
-        document.getElementById("klima").innerHTML ="";
+        document.getElementById("klima").innerHTML =""; Ostane zbirsano
         document.getElementById("klima").innerHTML+=message.payloadString;
         */
+      /*
        if(message.payloadString === "1"){
         current_state_of_klima = 1;
-        document.getElementById("pub").value = "IZKLOPI KLIMO";
+        document.getElementById("pub").value = "";
         document.getElementById("klima").classList.remove("dot_off")
         document.getElementById("klima").classList.add("dot_on")
        }else{
         current_state_of_klima = 0;
-        document.getElementById("pub").value = "VKLOPI KLIMO";
+        document.getElementById("pub").value = "";
         document.getElementById("klima").classList.remove("dot_on")
         document.getElementById("klima").classList.add("dot_off")
        }
+       */
     }
 
 

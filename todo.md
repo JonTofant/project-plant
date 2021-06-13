@@ -3,3 +3,5 @@
 - [x] DEKSTOP Naredi dalši grid za sliko in naj ostane levi in desni container enak pod njima daš prazen prostor
 
 - [x] javascript ne menjuje vrednosti vlages
+
+- [x] zbriš en vss

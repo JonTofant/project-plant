@@ -1,9 +1,18 @@
+/*----------
+Root
+---------*/
+
+:root {
+  --background: #add9db;
+  --text: Arial, Helvetica, sans-serif;
+}
+
 /*------------
 globalni stil
 --------------*/
 
 body {
-  background-color: #add9db;
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -14,11 +23,10 @@ globalni stil za vso besedilo razen naslov
 -------------------------------------------*/
 
 .infoText {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--text);
   font-size: 1.5rem;
   margin-right: 5px;
-  color:#3f913a
-
+  color: #3f913a;
 }
 
 /*--------------------------------------------------
@@ -137,7 +145,6 @@ telefoni in majhni zasloni
 -----------------------------*/
 
 @media only screen and (max-width: 500px) {
-
   .naslovniOkvir {
     flex-direction: column;
     align-items: center;
@@ -230,7 +237,6 @@ tablice in zasloni srednjih velikosti
     gap: 20px;
   }
 
-
   .tri {
     grid-area: okvirTri;
   }
@@ -246,7 +252,7 @@ tablice in zasloni srednjih velikosti
   /*---------
       slike
   -----------*/
-  .slikaRastlina{
+  .slikaRastlina {
     max-height: 300px;
   }
 
@@ -254,14 +260,14 @@ tablice in zasloni srednjih velikosti
       Graf
   ------------*/
 
-  .grafContainer{
-    display:flex;
-    justify-content:center;
+  .grafContainer {
+    display: flex;
+    justify-content: center;
     align-items: center;
     height: 100%;
   }
-  .graf{
-    width:100%;
+  .graf {
+    width: 100%;
   }
 }
 
@@ -278,11 +284,10 @@ računalniki in zasloni širokih velikosti
   Razporeditev v zunanjem okvirju
   --------------------------------*/
 
-  .naslovniOkvir{
-    display:flex;
-    justify-content:center;
+  .naslovniOkvir {
+    display: flex;
+    justify-content: center;
   }
-  
 
   .zunanjiOkvir {
     display: grid;
@@ -295,7 +300,7 @@ računalniki in zasloni širokih velikosti
       "prostoLevo slika prostoDesno";
   }
 
-  .notranjiOkvir{
+  .notranjiOkvir {
     max-height: 300px;
   }
   .ena {
@@ -319,8 +324,7 @@ računalniki in zasloni širokih velikosti
   /*-----
   Graf
   -------*/
-  .graf{
+  .graf {
     max-height: 80%;
   }
-
 }
